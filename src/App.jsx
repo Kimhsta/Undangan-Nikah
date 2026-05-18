@@ -18,7 +18,7 @@ const COUPLE_NAME = "Mahes & Nadiya";
 const WEDDING_DATE_LABEL = "Jumat, 19 April 2030";
 const OPENING_GREETING = "السلام عليكم ورحمة الله وبركاته";
 const OPENING_TEXT =
-    "Kanthi raos syukur dhumateng Gusti Allah SWT, kula kekalih nyuwun rawuhipun Bapak/Ibu/Sedherek sedaya wonten ing adicara pawiwahan kula kekalih. Rawuhipun saha donga pangestu panjenengan dados pakurmatan lan kabingahan ageng tumrap kula kekalih.";
+    "Kanthi ngaturaken syukur dhumateng Allah Subhanahu wa Ta’ala, kula kekalih nyuwun rawuhipun Bapak/Ibu/Sedherek sedaya wonten ing adicara walimatul ‘urs kula kekalih. Rawuhipun saha donga panjenengan mugi dados kebaikan saha keberkahan saking Allah kangge kula kekalih.";
 const MAPS_EMBED_URL =
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.0212873837963!2d110.8258514!3d-7.5727096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a1682f643037d%3A0xe54e6067fc9b6bd5!2sKraton%20Surakarta%20Hadiningrat!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid";
 const WEDDING_DATE_TIME = "2030-04-19T08:00:00+07:00";
@@ -487,7 +487,7 @@ function RsvpSection() {
 
 function GiftSection() {
     const [copied, setCopied] = useState(false);
-    const accountNumber = "0000 0000 0000";
+    const accountNumber = "1370 0024 8961 3";
 
     const copyAccount = async () => {
         try {
@@ -510,7 +510,7 @@ function GiftSection() {
                 <div className="grid gap-6 md:grid-cols-2">
                     <div className="rounded-2xl border-t-8 border-keraton-gold bg-white p-8 shadow-xl reveal">
                         <p className="mb-2 text-sm font-bold uppercase tracking-[0.2em] text-keraton-gold">Bank</p>
-                        <h3 className="mb-6 font-serif text-4xl text-keraton-maroon">BCA</h3>
+                        <h3 className="mb-6 font-serif text-4xl text-keraton-maroon">Mandiri</h3>
                         <div className="space-y-5">
                             <div>
                                 <p className="text-sm uppercase tracking-[0.2em] text-gray-500">Nomor Rekening</p>
@@ -518,7 +518,7 @@ function GiftSection() {
                             </div>
                             <div>
                                 <p className="text-sm uppercase tracking-[0.2em] text-gray-500">Atas Nama</p>
-                                <p className="text-xl font-bold text-keraton-maroon">{COUPLE_NAME}</p>
+                                <p className="text-xl font-bold text-keraton-maroon">Kiki Mahesta</p>
                             </div>
                         </div>
                         <button
