@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+@source "../index.html";
+@source "./**/*.{js,jsx,ts,tsx}";
+
+@theme {
+    --color-keraton-maroon: #4a0404;
+    --color-keraton-maroon-light: #6e0a0a;
+    --color-keraton-gold: #c5a059;
+    --color-keraton-gold-bright: #dfbd7e;
+    --color-keraton-dark: #1a0f0f;
+    --color-keraton-cream: #fdfbf7;
+    --color-keraton-brown: #3d2b1f;
+
+    --font-serif: "Playfair Display", serif;
+    --font-sans: "Lato", sans-serif;
+    --font-javanese: "Cinzel", serif;
+
+    --animate-fade-in-up: fadeInUp 1.2s ease-out forwards;
+    --animate-float: float 6s ease-in-out infinite;
+    --animate-pulse-glow: pulseGlow 3s infinite;
+    --animate-gunungan-float: gununganFloat 8s ease-in-out infinite;
+    --animate-gunungan-3d: rotate3d 10s linear infinite;
+    --animate-scroll-down: scrollDown 2s infinite;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes gununganFloat {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(2deg) scale(1.05);
+    }
+}
+
+@keyframes scrollDown {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+@keyframes pulseGlow {
+    0%,
+    100% {
+        text-shadow: 0 0 10px #c5a059, 0 0 20px #c5a059;
+    }
+
+    50% {
+        text-shadow: 0 0 20px #c5a059, 0 0 30px #c5a059, 0 0 40px #c5a059;
+    }
+}
+
+@keyframes rotate3d {
+    0% {
+        filter: brightness(1);
+        transform: rotateY(0deg) rotateX(0deg) scale(1);
+    }
+
+    25% {
+        filter: brightness(1.5);
+        transform: rotateY(90deg) rotateX(5deg) scale(1.1);
+    }
+
+    50% {
+        filter: brightness(1);
+        transform: rotateY(180deg) rotateX(0deg) scale(1.2);
+    }
+
+    75% {
+        filter: brightness(0.8);
+        transform: rotateY(270deg) rotateX(-5deg) scale(1.1);
+    }
+
+    100% {
+        filter: brightness(1);
+        transform: rotateY(360deg) rotateX(0deg) scale(1);
+    }
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-keraton-dark text-keraton-cream antialiased overflow-x-hidden;
+    }
+}
+
+@layer components {
+    .parang-bg {
+        background-color: #2a1b1b;
+        background-image:
+            linear-gradient(45deg, rgba(197, 160, 89, 0.05) 25%, transparent 25%),
+            linear-gradient(-45deg, rgba(197, 160, 89, 0.05) 25%, transparent 25%),
+            linear-gradient(45deg, transparent 75%, rgba(197, 160, 89, 0.05) 75%),
+            linear-gradient(-45deg, transparent 75%, rgba(197, 160, 89, 0.05) 75%);
+        background-size: 40px 40px;
+        background-position: 0 0, 0 20px, 20px -20px, -20px 0;
+    }
+
+    /* Premium Gold Gradient */
+    .gold-gradient {
+        background: linear-gradient(135deg, #c5a059 0%, #dfbd7e 50%, #c5a059 100%);
+    }
+
+    .glass-3d {
+        background: rgba(42, 27, 27, 0.4);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(197, 160, 89, 0.3);
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.5),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        transform-style: preserve-3d;
+        transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .gunungan-svg {
+        filter: drop-shadow(0 0 15px rgba(197, 160, 89, 0.6));
+    }
+
+    .perspective-1000 {
+        perspective: 1000px;
+    }
+
+    .perspective-2000 {
+        perspective: 2000px;
+    }
+
+    .preserve-3d {
+        transform-style: preserve-3d;
+    }
+
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 1s ease-out;
+    }
+
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
