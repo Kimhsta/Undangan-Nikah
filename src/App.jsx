@@ -535,8 +535,8 @@ function GiftSection() {
                         <div className="mb-6 flex h-40 w-40 items-center justify-center rounded-xl border-2 border-dashed border-keraton-gold bg-keraton-gold/10 p-4">
                             <p className="font-serif text-2xl font-bold text-keraton-maroon">QRIS</p>
                         </div>
-                        <h3 className="mb-3 font-serif text-3xl text-keraton-maroon">QRIS Mahes & Nadiya</h3>
-                        <p className="text-gray-500">QRIS: QRIS Mahes & Nadiya</p>
+                        <h3 className="mb-3 font-serif text-3xl text-keraton-maroon">QRIS Kiki Mahesta</h3>
+                        <p className="text-gray-500">QRIS: Kiki Mahesta</p>
                     </div>
                 </div>
             </div>
