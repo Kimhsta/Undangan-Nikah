@@ -1,5 +1,5 @@
 import heroImage from "../assets/hero.jpg";
-import groomImage from "../assets/image.png";
+import groomImage from "../assets/image copy.png";
 import brideImage from "../assets/93c7743b649278f1ea85962b5ffdcefe.jpg";
 import weddingMusic from "../assets/ssstik.io_1779027738656.mp3";
 import gallery1 from "../assets/galery1.jpg";
